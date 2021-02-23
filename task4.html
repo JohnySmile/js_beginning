@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use sctrict' 
+        function getAddiction(a, b) {
+            let result = '';
+            result = a + b;
+            return alert(`Сумма чисел равна: ${result}`);
+        }
+        function getSubstraction(a, b) {
+            let result = '';
+            result = a - b;
+            return alert(`Разность чисел равна: ${result}`);
+        }
+        function getMultiplication(a, b) {
+            let result = '';
+            result = a * b;
+            return alert(`Произведение чисел равно: ${result}`);
+        }
+        function getDivision(a, b) {
+            let result = '';
+            result = a / b;
+            return alert(`Результат деления чисел равен: ${result}`);
+        }
+        let a = Number(prompt("Введите первое произвольное целое число"));
+        let b = Number(prompt("Введите второе произвольное целое число"));
+        getAddiction(a, b);
+        getSubstraction(a, b);
+        getMultiplication(a, b);
+        getDivision(a, b);
+    </script>
+</body>
+</html>
