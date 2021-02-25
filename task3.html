@@ -6,22 +6,26 @@
 </head>
 <body>
     <script>
-        'use sctrict'
-        let result='';
-        let a = Number(prompt("Введите первое произвольное целое число"));
-        let b = Number(prompt("Введите второе произвольное целое число")); 
-        if (a >= 0 && b >= 0) {
-            result = a - b;
-            alert (result);
-        }
-        else if (a < 0 && b < 0) {
-            result = a * b;
-            alert (result);
-        }
-        else if ((a >= 0 && b < 0)||(a < 0 && b >= 0)) {
-            result = a + b;
-            alert (result);
-       }
+        "use strict";
+        const products = [
+                            {
+                                id: 3,
+                                price: 200,
+                            },
+                            {
+                                id: 4,
+                                price: 900,
+                            },
+                            {
+                                id: 1,
+                                price: 1000,
+                            },
+                        ];
+        products.forEach(function(product) {
+            product.price = product.price - (product.price / 100 * 15);
+            return product.price;
+        })
+        console.log(products);
     </script>
 </body>
 </html>

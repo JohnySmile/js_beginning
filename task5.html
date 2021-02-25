@@ -6,49 +6,9 @@
 </head>
 <body>
     <script>
-        'use sctrict' 
-        function getAddiction(a, b) {
-            let result = '';
-            result = a + b;
-            return alert(`Сумма чисел равна: ${result}`);
+        "use strict";
+        for(let i = 0; i < 10; console.log(i), i++){           
         }
-        function getSubstraction(a, b) {
-            let result = '';
-            result = a - b;
-            return alert(`Разность чисел равна: ${result}`);
-        }
-        function getMultiplication(a, b) {
-            let result = '';
-            result = a * b;
-            return alert(`Произведение чисел равно: ${result}`);
-        }
-        function getDivision(a, b) {
-            let result = '';
-            result = a / b;
-            return alert(`Результат деления чисел равен: ${result}`);
-        }
-        function mathOperation(a, b, operation) {
-            switch (operation) {
-                case "Addiction":
-                    getAddiction(a, b);
-                    break;
-                case "Substraction":
-                    getSubstraction(a, b);
-                    break;
-                case "Multiplication":
-                    getMultiplication(a, b);
-                    break;
-                case "Division":
-                    getDivision(a, b);
-                    break;
-                default:
-                    alert( "Нет такой операции" );
-            }
-        }
-        let a = Number(prompt("Введите первое произвольное целое число"));
-        let b = Number(prompt("Введите второе произвольное целое число"));
-        let operation = prompt("Введите тип операции на английсокм языке: Addiction, Substraction, Multiplication, Division");
-        mathOperation(a, b, operation);
     </script>
 </body>
 </html>
