@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+         class Post {
+             constructor (author, text, date) {
+             this.author = author;
+             this.text = text;
+             this.date = date;
+         }
+            edit(text) {
+                this.text = text;
+            }
+         }
+
+
+         class AttachedPost extends Post {
+             constructor (author, text, date, highlighted) {
+                super(author, text, date);
+                this.highlighted = false;
+             }
+             
+             makeTextHighlighted() {
+                this.highlighted = true;
+             }
+         } 
+         let cardOdj = new AttachedPost ('Lermontov', 'Phatalist', 1839);
+         cardOdj.edit('Hero of our time');
+         cardOdj.makeTextHighlighted();
+         console.log (cardOdj);
+    </script>
+</body>
+</html>

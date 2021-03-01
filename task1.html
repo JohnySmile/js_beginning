@@ -7,15 +7,33 @@
 <body>
     <script>
         "use strict";
-        for (let i = 0; i < 11; i++) {
-            if (i == "0") {
-                console.log (i + " - это ноль");
-            } else if (i % 2 == 1) {
-                console.log (i + " - это нечетное число");
-            } else if (i % 2 == 0) {
-                console.log (i + " - это четное число");
+
+            //es5
+            /*function Product(name, price) {
+                this.name = name;
+                this.price = price;
             }
-        }
+            Product.prototype.make25PercentDiscount = function() {
+                this.price = this.price - (this.price / 100 * 25);
+            }
+            let product1 = new product('potato', '100');
+            product1.make25PercentDiscount();
+            console.log (product1);*/
+            //es6
+            class Product {
+                constructor (name, price) {
+                    this.name = name;
+                    this.price = price;
+                }
+
+                make25PercentDiscount() {
+                    this.price = this.price - (this.price / 100 * 25);
+                }
+            }
+
+            let product1 = new Product('potato', '100');
+            product1.make25PercentDiscount();
+            console.log (product1);
     </script>
 </body>
 </html>
