@@ -75,7 +75,7 @@ class Cart {
         this.allProducts = [];//массив объектов
         this._getProducts()
             .then(data => { //data - объект js
-                this.goods = [...data];
+                this.goods = data.contents;
                 this.render()
             });
     }
